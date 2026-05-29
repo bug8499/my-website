@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    uses: bug8499/iac-ops/.github/workflows/argocicd.yml@main
+    uses: bug8499/IaC-GitOps/.github/workflows/argocicd.yml@main
     with:
       service_name: "my-website"
       environment: "dev"
