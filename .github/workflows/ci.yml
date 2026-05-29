@@ -3,7 +3,7 @@ name: Deploy Prod
 on:
   push:
     branches:
-      - release     # ← ไฟล์นี้ trigger เฉพาะ release
+      - main     # ← ไฟล์นี้ trigger เฉพาะ release
 
 jobs:
   deploy:
