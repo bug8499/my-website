@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 More More More
+=======
+Fortynity or Babajiiii
+BABAJIII
+>>>>>>> dev
