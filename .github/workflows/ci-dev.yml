@@ -4,15 +4,11 @@ on:
   push:
     branches:
       - dev        # ← ไฟล์นี้ trigger เฉพาะ main
-<<<<<<< HEAD
-
-=======
   workflow_dispatch:
 permissions:
   contents: write
   id-token: write
   pull-requests: write
->>>>>>> dev
 jobs:
   deploy:
     uses: bug8499/IaC-GitOps/.github/workflows/argocicd.yml@main
