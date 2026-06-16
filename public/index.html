@@ -154,6 +154,12 @@
       const data = await res.json()
       alert(JSON.stringify(data, null, 2))
     })
+
+    document.querySelector('.btn-outline').addEventListener('click', async () => {
+      const res = await fetch('/api/tables')
+      const tables = await res.json()
+      alert('Tables in DB:\n' + tables.join('\n'))
+    })
   </script>
 
   <nav>

@@ -29,4 +29,15 @@ app.get('/api/db-test', async (req, res) => {
   }
 })
 
+app.get('/api/tables', async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name"
+    )
+    res.json(result.rows.map(r => r.table_name))
+  } catch (err) {
+    res.status(500).json({ error: err.message })
+  }
+})
+
 app.listen(80, () => console.log('Server running on port 80'))
