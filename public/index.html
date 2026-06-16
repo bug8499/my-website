@@ -148,6 +148,13 @@
   </style>
 </head>
 <body>
+  <script>
+    document.querySelector('.btn-primary').addEventListener('click', async () => {
+      const res = await fetch('/api/db-test')
+      const data = await res.json()
+      alert(JSON.stringify(data, null, 2))
+    })
+  </script>
 
   <nav>
     <div class="nav-logo">&#9670; DevSpace</div>
